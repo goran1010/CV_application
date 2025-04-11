@@ -1,11 +1,12 @@
 export default function List({ workExperience, deleteWorkExperience }) {
   return (
-    <div>
+    <div className="list">
       {workExperience.map((company) => {
         return (
           <div key={company.id}>
             <span>{company.name}</span>
             <button
+              className="button-delete"
               data-id={company.id}
               onClick={(e) => {
                 e.preventDefault();

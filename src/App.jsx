@@ -25,7 +25,7 @@ function App() {
     }
   }
   return (
-    <>
+    <main className="cv-app">
       <Header button={button} changeButton={changeButton} fullName={fullName} />
       <Main
         button={button}
@@ -35,7 +35,7 @@ function App() {
         changeFirstName={changeFirstName}
         changeLastName={changeLastName}
       />
-    </>
+    </main>
   );
 }
 

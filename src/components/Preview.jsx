@@ -8,7 +8,7 @@ export default function Preview({
   workExperience,
 }) {
   return (
-    <div>
+    <div className="preview">
       <p>
         Hello. Let me introduce myself.
         <br />

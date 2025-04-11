@@ -10,9 +10,11 @@ export default function Header({ button, changeButton, fullName }) {
   }
 
   return (
-    <div>
+    <div className="header">
       <h1>Hello {fullName !== " " ? fullName : "new user"}!</h1>
-      <button onClick={changeButton}>{buttonText}</button>
+      <button className="button-switch" onClick={changeButton}>
+        {buttonText}
+      </button>
       <h2>{h2Text}</h2>
     </div>
   );

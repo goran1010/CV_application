@@ -11,28 +11,33 @@ export default function Experience({
     setNewCompanyName(e.target.value);
   }
   return (
-    <form>
+    <form className="experience">
       <fieldset>
         <legend>Experience</legend>
         <div>
-          <label htmlFor="work-input">Write the name of the company:</label>
-          <input type="text" id="work-input" onChange={changeNewCompanyName} />
+          <label htmlFor="work-input">Name of the company:</label>
+          <input
+            type="text"
+            id="work-input"
+            value={newCompanyName}
+            onChange={changeNewCompanyName}
+          />
           <button
+            className="button-add"
             onClick={(e) => {
               e.preventDefault();
               addWorkExperience(newCompanyName);
               document.querySelector("#work-input").value = "";
+              setNewCompanyName("");
             }}
           >
-            Add new work experience
+            Add company
           </button>
         </div>
-        <div>
-          <List
-            workExperience={workExperience}
-            deleteWorkExperience={deleteWorkExperience}
-          />
-        </div>
+        <List
+          workExperience={workExperience}
+          deleteWorkExperience={deleteWorkExperience}
+        />
       </fieldset>
     </form>
   );

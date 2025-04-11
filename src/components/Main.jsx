@@ -50,7 +50,7 @@ export default function Main({
 
   if (button === "form") {
     return (
-      <div>
+      <div className="form">
         <Information
           firstName={firstName}
           lastName={lastName}
