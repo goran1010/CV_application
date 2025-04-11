@@ -23,6 +23,12 @@ export default function Preview({
         After that I have finished {highSchool} high school. <br />
         As a last stop on my educational journey I attended the {university}.
       </p>
+      <p>
+        I have worked at a number of different companies, and these include:
+      </p>
+      {workExperience.map((company) => {
+        return <p key={company.id}>{company.name}</p>;
+      })}
     </div>
   );
 }

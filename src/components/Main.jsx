@@ -37,11 +37,15 @@ export default function Main({
   }
 
   const [workExperience, setWorkExperience] = useState([]);
-  function addWorkExperience(e) {
-    setWorkExperience([...workExperience, e.target.value]);
+  function addWorkExperience(name) {
+    let id = self.crypto.randomUUID();
+    setWorkExperience([...workExperience, { name, id }]);
   }
-  function deleteWorkExperience(e) {
-    setWorkExperience();
+  function deleteWorkExperience(deleteID) {
+    const newArray = workExperience.filter(
+      (company) => company.id !== deleteID
+    );
+    setWorkExperience(newArray);
   }
 
   if (button === "form") {
